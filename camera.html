@@ -1,0 +1,134 @@
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        #waktu{
+            background-color: #55398c;
+            height:10px;
+        }
+        #vids{
+            position: fixed;
+            /* border-radius: 50%; */
+            right: 20px;
+            /* width: 10%;
+            height: 10%;
+            background-color: grey; */
+        }
+        .atas{
+            position: fixed;
+            width: 100%;
+        }
+    </style>
+    <div class="atas">
+        <div id="waktu" > </div>
+        <div style="text-align: center;"><span id="mundur"></span> </div>
+        <video autoplay id="vids"></video>
+    </div>
+    
+    <div class="container">
+        <div id="senin">
+            <div class="jumbotron">
+                soal senin
+            </div>
+        </div>
+        <div id="selasa">
+            <div class="jumbotron">
+                soal selasa
+            </div>
+        </div>
+        <div id="rabu">
+            <div class="jumbotron">
+                soal rabu
+            </div>
+        </div>
+        <div id="kamis">
+            <div class="jumbotron">
+                soal kamis
+            </div>
+        </div>
+        <div id="jumat">
+            <div class="jumbotron">
+                soal jumat
+            </div>
+        </div>
+        <div id="sabtu">
+            <div class="jumbotron">
+                soal sabtu
+            </div>
+        </div>
+    </div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnc5jX7BOT5alTTc9E_ZRjj6J7NBL3N0i6Zgj5LY1SDy9Hsw/viewform?embedded=true" width="100%" height="1040" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+   
+   <script>
+       timer(2,200);
+       streaming(300,300);
+        
+        var today = new Date()
+        var tgl = today.getDate();
+        var bln = today.getMonth()+1;
+        var thn = today.getFullYear();
+        var jam = today.getHours();
+        var mnt = today.getMinutes();
+        // function jadwal(){
+
+        // }
+        console.log(tgl+"/"+bln+"/"+thn+"  ,"+jam+":"+mnt)
+
+       function timer(minut, speed){
+                var menit;
+                var detik; // = 60;
+                var durasi; // =  detik * minut;
+                var mundur; // = durasi;   
+                var lebar;
+                if(localStorage.getItem("menit")){
+                    mundur = localStorage.getItem("menit");
+                    detik = localStorage.getItem("detik");
+                    durasi = 60 * minut;
+                }else{
+                    detik = 60;
+                    durasi = detik * minut;
+                    mundur = durasi;   
+                }
+
+                var timer = setInterval(()=>{
+                    mundur--
+                    detik--
+                    lebar = mundur / durasi * 100;
+                    menit = Math.floor(mundur / 60);
+                    if(detik < 0){
+                        detik = 60
+                    }
+
+                    if(mundur < 3){
+                         localStorage.clear();
+                    }
+                    if(mundur <= 0 ){
+                        console.log(" waktu habis");
+                        detik = 0;
+                        clearInterval(timer);
+                        // alert('waktu habis');
+                        // window.open("https://www.google.com");
+                    }else{
+                        document.getElementById("waktu").style.width = lebar +"%";
+                        console.log("sedang ujian")
+                        localStorage.setItem("menit",mundur);
+                        localStorage.setItem("detik", detik);
+                    }
+                    document.getElementById("mundur").innerHTML = menit +" menit "+ detik + " detik";
+                    
+                },speed);
+        }
+
+
+        function streaming(lebar,tinggi){
+             navigator.mediaDevices.getUserMedia({
+                video:{
+                    width:lebar,
+                    height:tinggi
+                }
+            })
+            .then(stream =>{
+                document.getElementById("vids").srcObject = stream
+            })
+        }
+       
+    </script>
+

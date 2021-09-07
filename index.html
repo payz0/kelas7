@@ -1,0 +1,217 @@
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+ 
+    <div class="container">
+   
+      <b id="info"></b><i style="float:right" id="rand"></i>
+      <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="jadwal-tab" data-toggle="tab" style="cursor:pointer" role="tab" aria-controls="home" aria-selected="true">Jadwal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="7-tab" data-toggle="tab" href="" role="tab" aria-controls="profile" aria-selected="false">Absen kelas 7</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="8-tab" data-toggle="tab" href="" role="tab" aria-controls="contact" aria-selected="false">Absen kelas 8</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="9-tab" data-toggle="tab" href="" role="tab" aria-controls="contact" aria-selected="false">Absen kelas 9</a>
+        </li>
+      </ul> -->
+        
+    
+
+    <!-- <div class="tab-content" id="myTabContent"> -->
+      <div  id="jadwal" >
+            <table class="table table-bordered table-hover">
+              <thead class="table-light">
+                  <tr>
+                      <th class="text-center">No</th>
+                      <th class="text-center">Hari</th>
+                      <th class="text-center">Jam</th>
+                      <th class="text-center">Mapel</th>
+                      <th class="text-center">Link</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td rowspan="2">1</td>
+                      <td rowspan="2">Senin</td>
+                      <td>07:30 - 09:00</td>
+                      <td>Bahasa Indonesia</td>
+                      <td class="text-center">
+                        <a href="https://www.google.com" class="btn btn-sm btn-info"> 7 </a> | 
+                        <a href="#" class="btn btn-sm btn-danger"> 8 </a> | 
+                        <a href="#" class="btn btn-sm btn-primary"> 9 </a>
+                    </td>
+                      
+                  </tr>
+                  <tr>
+                      <td>09:30 - 11:00</td>
+                      <td>Pendidikan Agama</td>
+                      <td class="text-center">
+                          <a href="#" class="btn btn-sm btn-info"> 7 </a> | 
+                          <a href="#" class="btn btn-sm btn-danger"> 8 </a> | 
+                          <a href="#" class="btn btn-sm btn-primary"> 9 </a>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td rowspan="2">2</td>
+                      <td rowspan="2">Selasa</td>
+                      <td>07:30 - 09:00</td>
+                      <td>IPA</td>
+                      <td class="text-center">
+                        <a href="https://www.google.com" class="btn btn-sm btn-info"> 7 </a> | 
+                        <a href="#" class="btn btn-sm btn-danger"> 8 </a> | 
+                        <a href="#" class="btn btn-sm btn-primary"> 9 </a>
+                    </td>
+                      
+                  </tr>
+                  <tr>
+                      <td>09:30 - 11:00</td>
+                      <td>Prakarya</td>
+                      <td class="text-center">
+                          <a href="#" class="btn btn-sm btn-info"> 7 </a> | 
+                          <a href="#" class="btn btn-sm btn-danger"> 8 </a> | 
+                          <a href="#" class="btn btn-sm btn-primary"> 9 </a>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td rowspan="2">3</td>
+                      <td rowspan="2">Rabu</td>
+                      <td>07:30 - 09:00</td>
+                      <td>Bahasa Inggris</td>
+                      <td class="text-center">
+                        <a href="https://www.google.com" class="btn btn-sm btn-info"> 7 </a> | 
+                        <a href="#" class="btn btn-sm btn-danger"> 8 </a> | 
+                        <a href="#" class="btn btn-sm btn-primary"> 9 </a>
+                    </td>
+                      
+                  </tr>
+                  <tr>
+                      <td>09:30 - 11:00</td>
+                      <td>Seni Budaya</td>
+                      <td class="text-center">
+                          <a href="#" class="btn btn-sm btn-info"> 7 </a> | 
+                          <a href="#" class="btn btn-sm btn-danger"> 8 </a> | 
+                          <a href="#" class="btn btn-sm btn-primary"> 9 </a>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td rowspan="2">4</td>
+                      <td rowspan="2">Kamis</td>
+                      <td>07:30 - 09:00</td>
+                      <td>IPS</td>
+                      <td class="text-center">
+                        <a href="https://www.google.com" class="btn btn-sm btn-info"> 7 </a> | 
+                        <a href="#" class="btn btn-sm btn-danger"> 8 </a> | 
+                        <a href="#" class="btn btn-sm btn-primary"> 9 </a>
+                    </td>
+                      
+                  </tr>
+                  <tr>
+                      <td>09:30 - 11:00</td>
+                      <td>Penjaskes</td>
+                      <td class="text-center">
+                          <a href="#" class="btn btn-sm btn-info"> 7 </a> | 
+                          <a href="#" class="btn btn-sm btn-danger"> 8 </a> | 
+                          <a href="#" class="btn btn-sm btn-primary"> 9 </a>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td >5</td>
+                      <td >Jumat</td>
+                      <td>07:30 - 09:00</td>
+                      <td>Matematika</td>
+                      <td class="text-center">
+                        <a href="https://www.google.com" class="btn btn-sm btn-info"> 7 </a> | 
+                        <a href="#" class="btn btn-sm btn-danger"> 8 </a> | 
+                        <a href="#" class="btn btn-sm btn-primary"> 9 </a>
+                    </td>
+                      
+                  </tr>
+                  
+                  <tr>
+                      <td>6</td>
+                      <td>Sabtu</td>
+                      <td>07:30 - 09:00</td>
+                      <td>Pkn</td>
+                      <td class="text-center">
+                        <a href="https://www.google.com" class="btn btn-sm btn-info"> 7 </a> | 
+                        <a href="#" class="btn btn-sm btn-danger"> 8 </a> | 
+                        <a href="#" class="btn btn-sm btn-primary"> 9 </a>
+                    </td>
+                      
+                  </tr>
+              </tbody>
+              
+          </table>
+      </div>
+
+      <!-- <div  id="7">
+         <div id="ff-compose"></div>
+<script async defer src="https://formfacade.com/include/118128056690554308450/form/1FAIpQLScz3UsSt6_CkwIHPHk29K9MtcxeTT-_Y5xRLpKmxPcaJg_Ffg/classic.js?div=ff-compose"></script>
+      </div>
+      <div  id="8">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScUjCG1HJRFr9BW0EmgoCupaDmTegQ7bnaO4c9jVPtUyCL_tw/viewform?embedded=true" width="100%" height="550px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+      <div  id="9">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc8NlrIasJR3INie-3Sv0Af-szJWF_sTcIz0mGDa4qEskDPvw/viewform?embedded=true" width="100%" height="550px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div> -->
+    <!-- </div> -->
+
+   
+    </div>
+    <script>
+        
+        var waktu = new Date();
+        var options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+     
+        $("#info").html(waktu.toLocaleDateString(['ban', 'id'],options)+", "+waktu.getHours()+":"+waktu.getMinutes());
+
+        setTimeout(()=>{
+          // window.open("https://www.google.com","_self");
+           if(waktu.getHours() < 7 || waktu.getHours() > 13){
+              $("#rand").html(" ujian di tutup")
+            }else{
+              $("#rand").html(" ujian di buka")
+            }
+        },500);
+
+        $('#jadwal').show();
+        $('#7').hide();
+        $('#8').hide();
+        $('#9').hide();
+        $('#jadwal-tab').on('click', function (e) {
+          e.preventDefault()
+          $('#jadwal').show();
+              $('#7').hide();
+              $('#8').hide();
+              $('#9').hide();
+        })
+        $('#7-tab').on('click', function (e) {
+          e.preventDefault()
+          $('#7').show();
+              $('#jadwal').hide();
+              $('#8').hide();
+              $('#9').hide();
+        })
+        $('#8-tab').on('click', function (e) {
+          e.preventDefault()
+          $('#8').show();
+              $('#jadwal').hide();
+            $('#7').hide();
+            $('#9').hide();
+        })
+        $('#9-tab').on('click', function (e) {
+          e.preventDefault()
+          $('#9').show();
+              $('#jadwal').hide();
+            $('#7').hide();
+            $('#8').hide();
+        })
+      </script>
+   
+  </body>
+</html>
