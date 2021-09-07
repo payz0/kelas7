@@ -1,0 +1,131 @@
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    
+
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" id="7-tab" data-toggle="tab" href="#" role="tab" aria-controls="profile" aria-selected="false">Kelas 7</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="8-tab" data-toggle="tab" href="#" role="tab" aria-controls="contact" aria-selected="false">Kelas 8</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="9-tab" data-toggle="tab" href="#" role="tab" aria-controls="contact" aria-selected="false">Kelas 9</a>
+            </li>
+        </ul>  
+         
+              <ul class="nav nav-tabs" style="background: rgb(201 199 255)" id="myTab" role="tablist">
+                <li class="nav-item">
+                <a class="nav-link" id="sesi1-tab" data-toggle="tab" href="#" role="tab" aria-controls="profile" aria-selected="false">Sesi 1</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="sesi2-tab" data-toggle="tab" href="#" role="tab" aria-controls="profile" aria-selected="false">Sesi 2</a>
+                </li>
+            </ul>
+        
+        <div id="sesi1" class="text-center">
+            Sesi 1 Jam 07:00
+            <div id="info1" class="container jumbotron">Absen Sesi 1 Belum dibuka</div>
+            <div class="infoAbsen1">
+                <div  id="7">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScz3UsSt6_CkwIHPHk29K9MtcxeTT-_Y5xRLpKmxPcaJg_Ffg/viewform?embedded=true" width="100%" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+                <div  id="8">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScUjCG1HJRFr9BW0EmgoCupaDmTegQ7bnaO4c9jVPtUyCL_tw/viewform?embedded=true" width="100%" height="550px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+                <div  id="9">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc8NlrIasJR3INie-3Sv0Af-szJWF_sTcIz0mGDa4qEskDPvw/viewform?embedded=true" width="100%" height="550px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            </div>
+      </div>
+
+      <!-- sesi 2 -->
+      <div id="sesi2" class="text-center">
+            Sesi 2 Jam 09:00
+            <div id="info2" class="container jumbotron">Absen Sesi 2 Belum dibuka</div>
+            <div class="infoAbsen2">
+                <div  id="72">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScz3UsSt6_CkwIHPHk29K9MtcxeTT-_Y5xRLpKmxPcaJg_Ffg/viewform?embedded=true" width="100%" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+                <div  id="82">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScUjCG1HJRFr9BW0EmgoCupaDmTegQ7bnaO4c9jVPtUyCL_tw/viewform?embedded=true" width="100%" height="550px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+                <div  id="92">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc8NlrIasJR3INie-3Sv0Af-szJWF_sTcIz0mGDa4qEskDPvw/viewform?embedded=true" width="100%" height="550px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            </div>
+      </div>
+     
+    <script>
+        var waktu = new Date();
+        $('#sesi1').show();
+        $('#sesi2').hide();
+
+        $('#7').show();
+        $('#8').hide();
+        $('#9').hide();
+        $('#72').show();
+        $('#82').hide();
+        $('#92').hide();
+
+        $('#sesi1-tab').on('click', function (e) {
+          e.preventDefault()
+            $('#sesi1').show();
+            $('#sesi2').hide();
+
+        })
+
+        $('#sesi2-tab').on('click', function (e) {
+          e.preventDefault()
+            $('#sesi1').hide();
+            $('#sesi2').show();
+    
+        })
+
+        $('#7-tab').on('click', function (e) {
+            e.preventDefault()
+            $('#7').show();
+            $('#8').hide();
+            $('#9').hide();
+            $('#72').show();
+            $('#82').hide();
+            $('#92').hide();
+        })
+        $('#8-tab').on('click', function (e) {
+            e.preventDefault()
+            $('#8').show();
+            $('#7').hide();
+            $('#9').hide();
+             $('#82').show();
+            $('#72').hide();
+            $('#92').hide();
+        })
+        $('#9-tab').on('click', function (e) {
+            e.preventDefault()
+            $('#9').show();
+            $('#7').hide();
+            $('#8').hide();
+            $('#92').show();
+            $('#72').hide();
+            $('#82').hide();
+        })
+
+        if(waktu.getHours() < 7 || waktu.getHours() > 9){
+              $("#info1").show();
+              $(".infoAbsen1").hide();
+           }else{
+              $("#info1").hide();
+              $(".infoAbsen1").show();
+           }
+        if(waktu.getHours() < 9 || waktu.getHours() > 12){
+              $("#info2").show();
+              $(".infoAbsen2").hide();
+           }else{
+              $("#info2").hide();
+              $(".infoAbsen2").show();
+           }
+      </script>
+   
+  </body>
+</html>
