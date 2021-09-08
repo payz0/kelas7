@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soal Ujian</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script> 
     <style>
         #waktu{
             background-color: #55398c;
@@ -14,71 +16,165 @@
             position: fixed;
             /* border-radius: 50%; */
             right: 20px;
-            width: 10%;
-            height: 10%;
+            /* width: 10%;
+            height: 10%; */
             background-color: grey;
         }
         .atas{
             position: fixed;
+            top:5px;
             width: 100%;
         }
+        .box{
+            background: #f9f9f9;
+            position: fixed;
+            top: 95px;
+            margin: 0 auto;
+            padding: 10px 70px;
+            box-shadow: 0px 0px 3px -1px #1b1b18;
+            left: 0;
+            right: 0;
+        }
     </style>
-
 </head>
-<body>  
+<body>
     <div class="atas">
         <div id="waktu" > </div>
-        <div style="text-align: center;"><span id="mundur"></span> </div>
-        <video autoplay id="vids"></video>
+        <div style="text-align: center;" class="bg-warning"><span id="mundur"></span> </div>
+        <div id="grid">
+            <video  autoplay id="vids" ></video>
+        </div>
     </div>
     
-    <div class="container">
+    <div class="container" style="margin-top:40px">
         <div id="senin">
-            <div class="jumbotron">
-                soal senin
+            <div id="sesi1" class="jumbotron">
+                Senin sesi 1
             </div>
+            <div id="sesi2" class="jumbotron">
+                Senin sesi 2
+                <button id="btn-islam" class="btn btn-info btn-sm" onclick="$('#islam').show();tomb()">Islam</button>
+                <button id="btn-protestan" class="btn btn-info btn-sm" onclick="$('#protestan').show();tomb()">Protestan</button>
+                <button id="btn-katolik" class="btn btn-info btn-sm" onclick="$('#katolik').show();tomb()">Katolik</button>
+                <button id="btn-hindu" class="btn btn-info btn-sm" onclick="$('#hindu').show();tomb()">Hindu</button>
+                <button id="btn-budha" class="btn btn-info btn-sm" onclick="$('#budha').show();tomb()">Budha</button>
+                <iframe id="islam" src="https://docs.google.com/forms/d/e/1FAIpQLSfnc5jX7BOT5alTTc9E_ZRjj6J7NBL3N0i6Zgj5LY1SDy9Hsw/viewform?embedded=true" width="100%" height="1040" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe id="protestan" src="https://docs.google.com/forms/d/e/1FAIpQLSfnc5jX7BOT5alTTc9E_ZRjj6J7NBL3N0i6Zgj5LY1SDy9Hsw/viewform?embedded=true" width="100%" height="1040" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            <script>
+                $("#islam").hide()
+                $("#protestan").hide()
+                $("#katolik").hide()
+                $("#hindu").hide()
+                $("#budha").hide()
+                function tomb(){
+                    $("#btn-islam").hide()
+                    $("#btn-protestan").hide()
+                    $("#btn-katolik").hide()
+                    $("#btn-hindu").hide()
+                    $("#btn-budha").hide() 
+                }
+            </script>
         </div>
         <div id="selasa">
-            <div class="jumbotron">
-                soal selasa
+            <div id="sesi3" class="jumbotron">
+                Selasa sesi 1
+            </div>
+            <div id="sesi4" class="jumbotron">
+                Selasa sesi 2
             </div>
         </div>
         <div id="rabu">
-            <div class="jumbotron">
-                soal rabu
+            <div id="sesi5" class="jumbotron">
+                Rabu sesi 1
+            </div>
+            <div id="sesi6" class="jumbotron">
+                Rabu sesi 2
             </div>
         </div>
         <div id="kamis">
-            <div class="jumbotron">
-                soal kamis
+            <div id="sesi7" class="jumbotron">
+                Kamis sesi 1
+            </div>
+            <div id="sesi8" class="jumbotron">
+                Kamis sesi 2
             </div>
         </div>
         <div id="jumat">
-            <div class="jumbotron">
-                soal jumat
+            <div id="sesi9" class="jumbotron">
+                Jumat sesi 1
+            </div>
+            <div id="sesi10" class="jumbotron">
+                Jumat sesi 2
             </div>
         </div>
         <div id="sabtu">
-            <div class="jumbotron">
-                soal sabtu
+            <div id="sesi11" class="jumbotron">
+                Sabtu sesi 1
+            </div>
+            <div id="sesi12" class="jumbotron">
+                Sabtu sesi 2
             </div>
         </div>
     </div>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnc5jX7BOT5alTTc9E_ZRjj6J7NBL3N0i6Zgj5LY1SDy9Hsw/viewform?embedded=true" width="100%" height="1040" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    
+<div class="container box animate__animated animate__bounce">
+  Waktu anda sisa <b id="tersisa"></b>, segera tekan kirim / submit, 
+  jika waktu habis maka jawaban tidak ada yang terkirim alias nilai anda NOL
+  <hr/>
+  <div class="text-center">
+    <button class="btn btn-primary btn-sm" onclick="$('.box').hide()">Tutup</button>
+  </div>
+</div>
    
    <script>
-       timer(2,200);
-       streaming(300,300);
-        
+       $('.box').hide();
         var today = new Date()
         var tgl = today.getDate();
         var bln = today.getMonth()+1;
         var thn = today.getFullYear();
         var jam = today.getHours();
         var mnt = today.getMinutes();
-        // function jadwal(){
+        
+        var harian = [{'hari':document.getElementById("senin"),'tgl':9,'sesi':[1,2]},
+        {'hari':document.getElementById("selasa"),'tgl':21, 'sesi':[3,4]},
+        {'hari':document.getElementById("rabu"),'tgl':22, 'sesi':[5,6]},
+        {'hari':document.getElementById("kamis"),'tgl':24, 'sesi':[7,8]},
+        {'hari':document.getElementById("jumat"),'tgl':25, 'sesi':[9,10]},
+        {'hari':document.getElementById("sabtu"),'tgl':26, 'sesi':[11,12]}]
 
-        // }
+     
+        function seleksiHari(lama){
+            harian.forEach((tag,i)=>{
+                if(tag.tgl != tgl){
+                    tag.hari.remove();
+                    console.log(tag)
+                    document.getElementById("mundur").innerHTML = "Tunggu waktu ujian sesuai jadwal, lalu refresh ya .."
+                }else{
+                    
+                    var ses1 = "sesi"+tag.sesi[0]
+                    var ses2 = "sesi"+tag.sesi[1]
+                    
+                    if(jam < 7  || jam > 9){
+                        document.getElementById(ses1).remove()
+                    }else{
+                        timer(lama,1000);
+                        streaming(150,100);
+                    }
+                    if(jam < 9 || jam > 11){
+                        document.getElementById(ses2).remove()
+                    }else{
+                        timer(lama,1000);
+                        streaming(150,100);
+                    }
+                }
+            })
+
+
+        }
+
+     
+
         console.log(tgl+"/"+bln+"/"+thn+"  ,"+jam+":"+mnt)
 
        function timer(minut, speed){
@@ -121,8 +217,14 @@
                         localStorage.setItem("menit",mundur);
                         localStorage.setItem("detik", detik);
                     }
-                    document.getElementById("mundur").innerHTML = menit +" menit "+ detik + " detik";
                     
+                    // warning
+                    if(mundur == 120 || mundur == 145){
+                        $('.box').show();
+                    }
+                    console.log(mundur)
+                    document.getElementById("mundur").innerHTML = menit +" menit "+ detik + " detik";
+                    document.getElementById("tersisa").innerHTML = menit +" menit "+ detik + " detik";
                 },speed);
         }
 
@@ -139,6 +241,56 @@
             })
         }
        
+         seleksiHari(3);
+
+        //  drag and drop
+        interact('#grid')
+            .draggable({
+                // enable inertial throwing
+                inertia: true,
+                // keep the element within the area of it's parent
+                modifiers: [
+                interact.modifiers.restrictRect({
+                    restriction: 'parent',
+                    endOnly: true
+                })
+                ],
+                // enable autoScroll
+                autoScroll: true,
+
+                listeners: {
+                // call this function on every dragmove event
+                move: dragMoveListener,
+
+                // call this function on every dragend event
+                end (event) {
+                    var textEl = event.target.querySelector('p')
+
+                    textEl && (textEl.textContent =
+                    'moved a distance of ' +
+                    (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
+                                Math.pow(event.pageY - event.y0, 2) | 0))
+                        .toFixed(2) + 'px')
+                }
+                }
+            })
+            function dragMoveListener (event) {
+                var target = event.target
+                // keep the dragged position in the data-x/data-y attributes
+                var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+                var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+                // translate the element
+                target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+                // update the posiion attributes
+                target.setAttribute('data-x', x)
+                target.setAttribute('data-y', y)
+                }
+
+                // this function is used later in the resizing and gesture demos
+                window.dragMoveListener = dragMoveListener
     </script>
-  </body>
+
+</body>
 </html>
