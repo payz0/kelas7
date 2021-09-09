@@ -136,7 +136,7 @@
         var jam = today.getHours();
         var mnt = today.getMinutes();
         
-        var harian = [{'hari':document.getElementById("senin"),'tgl':9,'sesi':[1,2]},
+        var harian = [{'hari':document.getElementById("senin"),'tgl':20,'sesi':[1,2]},
         {'hari':document.getElementById("selasa"),'tgl':21, 'sesi':[3,4]},
         {'hari':document.getElementById("rabu"),'tgl':22, 'sesi':[5,6]},
         {'hari':document.getElementById("kamis"),'tgl':24, 'sesi':[7,8]},
@@ -155,13 +155,13 @@
                     var ses1 = "sesi"+tag.sesi[0]
                     var ses2 = "sesi"+tag.sesi[1]
                     
-                    if(jam < 7  || jam > 9){
+                    if(jam < 7  || jam > 8){
                         document.getElementById(ses1).remove()
                     }else{
                         timer(lama,1000);
                         streaming(150,100);
                     }
-                    if(jam < 9 || jam > 11){
+                    if(jam < 9 || jam > 10){
                         document.getElementById(ses2).remove()
                     }else{
                         timer(lama,1000);
@@ -240,8 +240,8 @@
                 document.getElementById("vids").srcObject = stream
             })
         }
-       
-         seleksiHari(3);
+       //durasi ujian
+         seleksiHari(90);
 
         //  drag and drop
         interact('#grid')
